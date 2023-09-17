@@ -14,12 +14,17 @@ body {
     height: 650px;
     border-radius: 20px;
     box-shadow: 5px 5px 5px #1c1c1c;
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 .slider__control-panel {
     justify-content: space-between;
     display: flex;
 }
 .slider__mem-text {
+    animation-name: fadeIn;
+    animation-duration: 1s;
     color: white;
 }
 .slider__buttons-container {
@@ -48,4 +53,29 @@ body {
 
 .slider__button:hover {
     cursor: pointer;
+}
+
+.slider__button_choosen {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    border: 3px solid rgb(116, 187, 181);
+    background-color: rgb(66, 66, 77);
+}
+
+.slider__delete-image {
+    display: none;
+}
+
+.slider__delete-mem-text {
+    display: none; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

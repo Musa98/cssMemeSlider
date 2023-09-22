@@ -7,6 +7,10 @@ body {
     width: 100%;
 }
 
+input[type="radio"] {
+    display: none;
+}
+
 .slider__container {
     gap: 3.125rem;
     background-color: rgb(66, 66, 77);
@@ -19,6 +23,7 @@ body {
     padding-bottom: 1.875rem;;
 }
 .slider__image {
+    display: none;
     width: 100%;
     border-radius: 20px;
     box-shadow: 5px 5px 5px #1c1c1c;
@@ -32,6 +37,7 @@ body {
     display: flex;
 }
 .slider__mem-text {
+    display: none;
     animation-name: fadeIn;
     animation-duration: 1s;
     color: white;
@@ -53,6 +59,7 @@ body {
 }
 
 .slider__button {
+    display: block;
     border: none;
     background-color: rgb(116, 187, 181);
     border-radius: 50px;
@@ -62,6 +69,7 @@ body {
 
 .slider__button:hover {
     cursor: pointer;
+    background-color: white;
 }
 
 .slider__button_choosen {
@@ -75,17 +83,31 @@ body {
     background-color: white;
 }
 
-.slider__button-area:hover .slider__button_choosen {
+
+#slider-1:checked ~  .slider__image-container img:nth-child(1),
+#slider-2:checked ~  .slider__image-container img:nth-child(2),
+#slider-3:checked ~  .slider__image-container img:nth-child(3),
+#slider-4:checked ~  .slider__image-container img:nth-child(4){
+    display: block;
+}
+
+#slider-1:checked ~  .slider__control-panel .slider__mem-text:nth-child(1),
+#slider-2:checked ~  .slider__control-panel .slider__mem-text:nth-child(2),
+#slider-3:checked ~  .slider__control-panel .slider__mem-text:nth-child(3),
+#slider-4:checked ~  .slider__control-panel .slider__mem-text:nth-child(4){
+    display: block;
+}
+
+#slider-1:checked ~  .slider__control-panel .slider__buttons-container label:nth-child(1) span,
+#slider-2:checked ~  .slider__control-panel .slider__buttons-container label:nth-child(2) span,
+#slider-3:checked ~  .slider__control-panel .slider__buttons-container label:nth-child(3) span,
+#slider-4:checked ~  .slider__control-panel .slider__buttons-container label:nth-child(4) span{
+    animation-name: fadeIn;
+    animation-duration: 1s;
     border: 3px solid white;
     background-color: rgb(66, 66, 77);
-}
-
-.slider__delete-image {
-    display: none;
-}
-
-.slider__delete-mem-text {
-    display: none; 
+    width: 15px;
+    height: 15px;
 }
 
 @keyframes fadeIn {

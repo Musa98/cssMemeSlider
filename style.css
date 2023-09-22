@@ -1,0 +1,144 @@
+body {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100%;
+    width: 100%;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.slider__container {
+    gap: 3.125rem;
+    background-color: rgb(66, 66, 77);
+    min-width: 20rem;
+    padding: 3%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1.875rem;;
+}
+.slider__image {
+    display: none;
+    width: 100%;
+    border-radius: 1.25rem;
+    box-shadow: 0.3125rem 0.3125rem 0.3125rem #1c1c1c;
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+.slider__control-panel {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+.slider__mem-text {
+    display: none;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    color: white;
+}
+.slider__buttons-container {
+    display: flex;
+    gap: 0.3125rem;
+    margin-right: -0.9375rem;
+    margin-bottom: -0.625rem;
+    margin-top: -0.625rem;
+}
+
+.slider__button-area {
+    padding: 0.625rem;
+}
+
+.slider__button-area:hover {
+    cursor: pointer;
+}
+
+.slider__button {
+    display: block;
+    border: none;
+    background-color: rgb(116, 187, 181);
+    border-radius: 3.125rem;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.slider__button:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+.slider__button_choosen {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    border: 0.1875rem solid rgb(116, 187, 181);
+    background-color: rgb(66, 66, 77);
+}
+
+.slider__button-area:hover .slider__button {
+    background-color: white;
+}
+
+
+#slider-1:checked ~  .slider__image-container img:nth-child(1),
+#slider-2:checked ~  .slider__image-container img:nth-child(2),
+#slider-3:checked ~  .slider__image-container img:nth-child(3),
+#slider-4:checked ~  .slider__image-container img:nth-child(4){
+    display: block;
+}
+
+#slider-1:checked ~  .slider__control-panel .slider__mem-text:nth-child(1),
+#slider-2:checked ~  .slider__control-panel .slider__mem-text:nth-child(2),
+#slider-3:checked ~  .slider__control-panel .slider__mem-text:nth-child(3),
+#slider-4:checked ~  .slider__control-panel .slider__mem-text:nth-child(4){
+    display: block;
+}
+
+#slider-1:checked ~  .slider__control-panel .slider__buttons-container label:nth-child(1) span,
+#slider-2:checked ~  .slider__control-panel .slider__buttons-container label:nth-child(2) span,
+#slider-3:checked ~  .slider__control-panel .slider__buttons-container label:nth-child(3) span,
+#slider-4:checked ~  .slider__control-panel .slider__buttons-container label:nth-child(4) span{
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    border: 0.1875rem solid white;
+    background-color: rgb(66, 66, 77);
+    width: 0.9375rem;
+    height: 0.9375rem;
+}
+
+#slider-1 ~  .slider__control-panel .slider__buttons-container label:nth-child(1):active span,
+#slider-2 ~  .slider__control-panel .slider__buttons-container label:nth-child(2):active span,
+#slider-3 ~  .slider__control-panel .slider__buttons-container label:nth-child(3):active span,
+#slider-4 ~  .slider__control-panel .slider__buttons-container label:nth-child(4):active span{
+    box-shadow: 0.0625rem 0.0625rem 0.625rem black;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
+    .slider__container {
+        gap: 1.875rem;
+    }
+
+    .slider__control-panel {
+        flex-direction: column-reverse;
+        gap: 1.875rem;
+    }
+
+    .slider__buttons-container {
+        align-self: center;
+        margin-left: -0.9375rem;;
+    }
+}

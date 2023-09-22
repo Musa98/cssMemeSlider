@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normilize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Meme Slider</title>
+</head>
+<body>
+    <main class="slider__container">
+        <input class="slider__input-radiobutton" type="radio" name="slider" id="slider-1" checked>
+        <input class="slider__input-radiobutton" type="radio" name="slider" id="slider-2">
+        <input class="slider__input-radiobutton" type="radio" name="slider" id="slider-3">
+        <input class="slider__input-radiobutton" type="radio" name="slider" id="slider-4">
+
+        <div class="slider__image-container">
+            <img src="images/mem-12.jpg" class="slider__image">
+            <img src="images/mem-13.png" class="slider__image">
+            <img src="images/mem-14.jpeg" class="slider__image">
+            <img src="images/mem-16.jpg" class="slider__image">
+        </div>
+
+        <div class="slider__control-panel">
+            <div class="slider__mem-text">Тронешь еду - замяукаю.</div>
+            <div class="slider__mem-text">Представь что я бэтмен.</div>
+            <div class="slider__mem-text">Когда спалился, но держишься до конца.</div>
+            <div class="slider__mem-text">То чувство, когда проверил работу анонимно.</div>
+            <div class="slider__buttons-container">
+                <label for="slider-1" class="slider__button-area">
+                    <span class="slider__button"></span>
+                </label>
+                <label for="slider-2" class="slider__button-area">
+                    <span class="slider__button"></span>
+                </label>
+                <label for="slider-3" class="slider__button-area">
+                    <span class="slider__button"></span>
+                </label>
+                <label for="slider-4" class="slider__button-area">
+                    <span class="slider__button"></span>
+                </label>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -25,8 +25,8 @@ input[type="radio"] {
 .slider__image {
     display: none;
     width: 100%;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px #1c1c1c;
+    border-radius: 1.25rem;
+    box-shadow: 0.3125rem 0.3125rem 0.3125rem #1c1c1c;
     opacity: 1;
     animation-name: fadeIn;
     animation-duration: 1s;
@@ -44,14 +44,14 @@ input[type="radio"] {
 }
 .slider__buttons-container {
     display: flex;
-    gap: 5px;
-    margin-right: -15px;
-    margin-bottom: -10px;
-    margin-top: -10px;
+    gap: 0.3125rem;
+    margin-right: -0.9375rem;
+    margin-bottom: -0.625rem;
+    margin-top: -0.625rem;
 }
 
 .slider__button-area {
-    padding: 10px;
+    padding: 0.625rem;
 }
 
 .slider__button-area:hover {
@@ -62,9 +62,9 @@ input[type="radio"] {
     display: block;
     border: none;
     background-color: rgb(116, 187, 181);
-    border-radius: 50px;
-    width: 20px;
-    height: 20px;
+    border-radius: 3.125rem;
+    width: 1.25rem;
+    height: 1.25rem;
 }
 
 .slider__button:hover {
@@ -75,7 +75,7 @@ input[type="radio"] {
 .slider__button_choosen {
     animation-name: fadeIn;
     animation-duration: 1s;
-    border: 3px solid rgb(116, 187, 181);
+    border: 0.1875rem solid rgb(116, 187, 181);
     background-color: rgb(66, 66, 77);
 }
 
@@ -104,10 +104,17 @@ input[type="radio"] {
 #slider-4:checked ~  .slider__control-panel .slider__buttons-container label:nth-child(4) span{
     animation-name: fadeIn;
     animation-duration: 1s;
-    border: 3px solid white;
+    border: 0.1875rem solid white;
     background-color: rgb(66, 66, 77);
-    width: 15px;
-    height: 15px;
+    width: 0.9375rem;
+    height: 0.9375rem;
+}
+
+#slider-1 ~  .slider__control-panel .slider__buttons-container label:nth-child(1):active span,
+#slider-2 ~  .slider__control-panel .slider__buttons-container label:nth-child(2):active span,
+#slider-3 ~  .slider__control-panel .slider__buttons-container label:nth-child(3):active span,
+#slider-4 ~  .slider__control-panel .slider__buttons-container label:nth-child(4):active span{
+    box-shadow: 0.0625rem 0.0625rem 0.625rem black;
 }
 
 @keyframes fadeIn {
@@ -132,6 +139,6 @@ input[type="radio"] {
 
     .slider__buttons-container {
         align-self: center;
-        margin-left: -15px;
+        margin-left: -0.9375rem;;
     }
 }
